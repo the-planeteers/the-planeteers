@@ -88,6 +88,24 @@ body {
 .carolyn-img:hover .img-top {
   display: inline;
 }
+
+.chi-img {
+  width: 90px;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin: 30px;
+}
+.chi-img .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.chi-img:hover .img-top {
+  display: inline;
+}
 /*nav bar code*/
 ul {
   list-style-type: none;
@@ -184,6 +202,16 @@ li a:hover {
         .on("click", function(d){
             $("#solarX").show();
         });
+    var co2 = svg.append('image')
+      .attr('xlink:href', 'co2.png')
+      .attr("x", 900)
+      .attr("y", 150)
+      .attr('width', 200)
+      .attr('height', 200)
+      .attr('id', 'idCo')
+      .on("click", function(d){
+          $("#co2").show();
+      });
   </script>
 <!-- Modal using jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -224,6 +252,7 @@ li a:hover {
     initializeModal('spacejunk1', 'y');
     initializeModal('spacejunk2', 'idP2');
     initializeModal('solarX', 'idS');
+    initializeModal('co2', 'idCo');
 });
 </script><!-- The Modal for carolyn speech box-->
 <div id="carolyn" class="modal">
@@ -231,9 +260,9 @@ li a:hover {
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Hi there, I'm Carolyn. I'm the Wasteland Commander! Our solar system is 
-      flooded with space junk and I'm here to manage it. Probe around with your
-      searcher tool and help me collect some space trash!
+      Hi there, I'm Carolyn. I'm the Wasteland Commander! Our stellar system is 
+      flooded with space junk and carbon emissions and I'm here to manage it. Click around to see what 
+      these emissions by species do to planets!
       <div class = "child">
         <div class="carolyn-img">
           <img src="c1.png" width ="250" alt="no wink">
@@ -250,11 +279,16 @@ li a:hover {
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Oh no! One of those human astronauts 
-      from Earth might have left some of 
-      their tools. Once an object goes into orbit, 
-      it's going to stay in space forever
-      (until I come to clean it up :D)
+      Hey there, I'm Chi. I want to teach you about space junk.
+      Space junk is all the stuff species put out that orbit their planet like a satellite,
+      except it's bad... with too much space junk a planet will have a high albedo
+      and reflect away all of the starlight it recieves. Brr...
+      <div class = "child">
+        <div class="chi-img">
+          <img src="chi-blue.png" width ="250" alt="no wink">
+            <img src="chi-purple.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
     </div>
   </div>
   </div>
@@ -270,7 +304,34 @@ li a:hover {
       of floating bits of junk in our solar system. 
       If a satellite goes out of commission or 
       is damaged while in space, it's difficult 
-      to clean up and will pollute our orbits.
+      to clean up and will pollute our orbits. I don't like it when that
+      happens...
+      <div class = "child">
+        <div class="chi-img">
+          <img src="chi-blue.png" width ="250" alt="no wink">
+            <img src="chi-purple.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- co2 Modal -->
+<div id="co2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Ugh... this species seems to have emitted a lot of carbon! They must have a alrge greenhouse effect,
+      I bet all the starlight they recieve is trapped in their atmosphere and its super hot on their planet!
+      Talk about balmy...
+      <div class = "child">
+        <div class="chi-img">
+          <img src="chi-blue.png" width ="250" alt="no wink">
+            <img src="chi-purple.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
     </div>
   </div>
   </div>
@@ -294,7 +355,7 @@ li a:hover {
       <br> You know what that means??
       <br>
       <br> Well do you??
-      <br> INFINITE ENERGY BABYYYYYYYYYYYY!!!!
+      <br> INFINITE ENERGY BABY!!!
       <br> <a hr
       <div class ="child">
         <div class="carolyn-img">
