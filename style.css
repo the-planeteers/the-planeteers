@@ -114,7 +114,7 @@
     }
 }
 
-#galaxy-lines{
+#galaxy-lines-low{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
@@ -124,7 +124,47 @@
     left:40vw;
 }
 
-#galaxy-lines-2{
+#galaxy-lines-low-highcarbon{
+    position:absolute;
+    /* width:520px; */
+    /* height:500px; */
+    width:25vw;
+    height:50vh;
+    top:28vh;
+    left:40vw;
+}
+
+#galaxy-lines-low-lowcarbon{
+    position:absolute;
+    /* width:520px; */
+    /* height:500px; */
+    width:25vw;
+    height:50vh;
+    top:28vh;
+    left:40vw;
+}
+
+#galaxy-lines-high{
+    position:absolute;
+    /* width:520px; */
+    /* height:500px; */
+    width:50vw;
+    height:100vh;
+    top:5vh;
+    left:28vw;
+}
+
+#galaxy-lines-high-highcarbon{
+    position:absolute;
+    /* width:520px; */
+    /* height:500px; */
+    width:50vw;
+    height:100vh;
+    top:5vh;
+    left:28vw;
+}
+
+#galaxy-lines-high-lowcarbon{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
