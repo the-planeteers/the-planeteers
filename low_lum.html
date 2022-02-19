@@ -123,7 +123,17 @@ svg {
     svg.append("rect")
         .attr("width", 1150)
         .attr("height", 550);
-        
+    //low lum
+    var lum = svg.append('image')
+        .attr('xlink:href', 'galaxy-lines.png')
+        .attr("x", 300)
+        .attr("y", 100)
+        .attr('width', 300)
+        .attr('height', 300)
+        .attr('id', 'idSUN')
+        .on("click", function(d){
+            $("#sun").show();
+        });
     //linnea small icon
     var myimage_c = svg.append('image')
         .attr('xlink:href', 't3.png')
