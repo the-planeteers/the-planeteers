@@ -11,37 +11,124 @@ img{
     left:50vw;
 }
 
-#p1{
+/* Want to make planets rotate around central sun */
+.p1{
+    width:10px;
+    height:10px;
+    border-radius:50%;
     position:absolute;
+    overflow:hidden;
     top:50vh;
-    left:40vw;
+    left:50vw;
+    margin:auto;
+    animation: p1 6s linear infinite;
+  }
+  
+  @keyframes p1{
+    0%{
+      transform:rotate(0deg)
+                translate(10vw)
+                rotate(0deg);
+  
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(10vw)
+                rotate(360deg);
+    }
 }
 
-#p2{
+/* Want to make planets rotate around central sun */
+.p2{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    position:absolute;
+    overflow:hidden;
+    top:50vh;
+    left:50vw;
+    margin:auto;
+    animation: p2 6s linear infinite;
+  }
+  
+  @keyframes p2{
+    0%{
+      transform:rotate(0deg)
+                translate(15vw)
+                rotate(0deg);
+  
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(15vw)
+                rotate(360deg);
+    }
+}
+
+/* Want to make planets rotate around central sun */
+.p3{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    position:absolute;
+    overflow:hidden;
+    top:50vh;
+    left:50vw;
+    margin:auto;
+    animation: p3 6s linear infinite;
+  }
+  
+  @keyframes p3{
+    0%{
+      transform:rotate(0deg)
+                translate(20vw)
+                rotate(0deg);
+  
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(20vw)
+                rotate(360deg);
+    }
+}
+
+/* Want to make planets rotate around central sun */
+.p4{
     width:30px;
     height:30px;
+    border-radius:50%;
     position:absolute;
-    top:49vh;
-    left:30vw;
-}
-
-#p3{
-    position:absolute;
+    overflow:hidden;
     top:50vh;
-    left:20vw;
+    left:50vw;
+    margin:auto;
+    animation: p4 6s linear infinite;
+  }
+  
+  @keyframes p4{
+    0%{
+      transform:rotate(0deg)
+                translate(40vw)
+                rotate(0deg);
+  
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(40vw)
+                rotate(360deg);
+    }
 }
 
-#p4{
-    width:35px;
-    height:35px;
-    position:absolute;
-    top:49vh;
-    left:10vw;
-}
 #galaxy-lines{
     position:absolute;
-    width:520px;
-    height:500px;
-    top:12vh;
-    left:32vw;
+    /* width:520px; */
+    /* height:500px; */
+    width:25vw;
+    height:50vh;
+    top:28vh;
+    left:40vw;
 }
