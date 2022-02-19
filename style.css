@@ -123,3 +123,13 @@
     top:28vh;
     left:40vw;
 }
+
+#galaxy-lines-2{
+    position:absolute;
+    /* width:520px; */
+    /* height:500px; */
+    width:35vw;
+    height:70vh;
+    top:28vh;
+    left:40vw;
+}
