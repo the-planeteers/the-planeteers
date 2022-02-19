@@ -259,27 +259,27 @@ border-radius: 100px;
     position:absolute;
     /* width:520px; */
     /* height:500px; */
-    width:50vw;
-    height:100vh;
-    top:5vh;
-    left:28vw;
+    width:38vw;
+    height:80vh;
+    top:12vh;
+    left:33vw;
 }
 
 #galaxy-lines-high-highcarbon{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
-    width:50vw;
-    height:100vh;
-    top:5vh;
-    left:28vw;
+    width:25vw;
+    height:50vh;
+    top:28vh;
+    left:40vw;
 }
 
 #galaxy-lines-high-lowcarbon{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
-    width:50vw;
+    width:48vw;
     height:100vh;
     top:5vh;
     left:28vw;

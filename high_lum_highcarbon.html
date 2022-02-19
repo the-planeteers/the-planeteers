@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src = "https://d3js.org/d3-path.v1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Planets in line -->
+<img id="galaxy-lines-high-highcarbon" src="galaxy-lines.png"></img>
+<img id="sun" src="sun.png" ></img>
+<img class="p1" src="planet.png" ></img>
+<img class="p2" src="p2.png" ></img>
+<img src="blue_planet.png" class="p3"></img>
+<img src="green_planet.png" class="p4"></img>
+
+<!-- Begin JavaScript using DS -->
+<script>
+    var width = 1150;
+    var height = 550;
+
+    //Create SVG element
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+    //Create and append rectangle element
+    svg.append("rect")
+        .attr("width", 1150)
+        .attr("height", 550);
+    //linnea small icon
+    var myimage_c = svg.append('image')
+        .attr('xlink:href', 't4.png')
+        .attr("x", 950)
+        .attr("y", 90)
+        .attr('width', 100)
+        .attr('height', 100)
+        .attr('id', 'x')
+        //open modal on click
+        .on("click", function(d){
+            $("#linnea").show();
+        });
+        var wastelands_icon = svg.append('image')
+        .attr('xlink:href', 'wasteland-icon.png')
+        .attr("x", 50)
+        .attr("y", 350)
+        .attr('width', 150)
+        .attr('height', 150)
+        .attr('id', 'wl')
+        .on("click", function(d){
+            $("#wasteland").show();
+        });
+</script>
+<!-- Modal using jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    $("#modal .close").click()
+</script>
+<!-- Script to open modals based on input -->
+<script>
+  function initializeModal(modalID, buttonID) {
+  // Get the modal element
+  var modal = document.getElementById(modalID);
+
+  // Get the button that opens the modal
+  var btn = document.getElementById(buttonID);
+
+  // Get the <span> element that closes the modal
+  var span = modal.querySelector('.close');
+  // When the user clicks on <span> (x), close the modal
+  span.addEventListener('click', function() {
+    modal.style.display = "none";
+  });
+  // When the user clicks on the button, open the modal
+  btn.addEventListener('click', function() {
+    modal.style.display = "block";
+  });
+  // Close modal outside of box
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+  //Input for multiple modals
+  window.addEventListener('load', function() {
+    initializeModal('linnea', 'x');
+    initializeModal('wasteland', 'wl');
+});
+
+</script>
+<!-- The Modal for linnea speech box-->
+<div id="linnea" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      The habitable zone is the distance from a star where a planet can sustain liquid water. Sadly, other factors affect whether the habitable zone for a planet too...
+      Which future do you want to see of the planet?
+      <div class = "child">
+        <div class="linnea-img">
+          <img src="t.png" width ="250" alt="no wink">
+            <img src="t2.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<!-- modal for wasteland -->
+<div id="wasteland" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Hey there, name's Liz. I'm just doing my routine search of space trash I can repurpose for my satellites. 
+      I take 'em with me to the wasteland. Wanna come with?
+      <br>
+      <br>
+      <a href="spacejunk.html" class ="button"> Take me there! </a>
+      <div class = "child">
+        <div class="linnea-img">
+          <img src="l1.png" width ="250" alt="no wink">
+            <img src="l2.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+</body>
+
+</html>
