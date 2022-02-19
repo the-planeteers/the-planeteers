@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+<style>
+
+body {
+  background-image: url('galaxydrawn1.png');
+  background-size: 1450px 750px;
+}
+
+/*nav bar code*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<body>
+<ul>
+    <li><a class="active" href="index.html">The Galaxy</a></li>
+    <li><a class="active" href="spacejunk.html">The Wastelands</a></li>
+    <li><a href="inactive" href="planeteers.html">The Planeteers</a></li>
+    <li><a class="active" href="references.html">The Resources</a></li>
+  </ul>
+<style>
+
+
+/*about us*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  margin: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+.about-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #4b02618a;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+  }
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>Meet the Planeteers </h1>
+  <p>Our T9 Hackathon Website!</p>
+</div>
+
+<h2 style="text-align:center"></h2>
+<div class="row">
+  <div class="text-align:center">
+    <div class="card">
+      <img src="sun.png" alt="IDchi" style="width:15%" class="center">
+      <div class="container">
+        <h2>Chi</h2>
+        <p class="title">about me!</p>
+        <p>cool things</p>
+        <p><a href="website">My website!</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-align:center">
+    <div class="card">
+      <img src="t2.png" alt="IDlinnea" style="width:15%" class="center">
+      <div class="container">
+        <h2>Linnea</h2>
+        <p class="title">about me!</p>
+        <p>cool things</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-align:center">
+    <div class="card">
+      <img src="l1.png" alt="IDliz" style="width:15%" class="center">
+      <div class="container">
+        <h2>Liz</h2>
+        <p class="title">about me!</p>
+        <p>cool things</p>
+        <p><a href="website">My website!</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-align:center">
+    <div class="card">
+      <img src="c1.png" alt="IDcaro" style="width:15%" class="center">
+      <div class="container">
+        <h2>Carolyn</h2>
+        <p class="title">about me!</p>
+        <p>cool things</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
