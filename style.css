@@ -379,18 +379,18 @@ border-radius: 100px;
     position:absolute;
     /* width:520px; */
     /* height:500px; */
-    width:22vw;
+    width:25vw;
     height:50vh;
-    top:28.75vh;
-    left:41.25vw;
+    top:28vh;
+    left:40vw;
 }
 
 #galaxy-lines-high-highcarbon{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
-    width:49vw;
-    height:101.4vh;
-    top:2vh;
-    left:28.25vw;
+    width:43vw;
+    height:99vh;
+    top:3.75vh;
+    left:30.5vw;
 }
