@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body {
+  background-image: url('galaxy.png');
+}
+    /*for hover effect!*/
+.carolyn-img {
+  width: 90px;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin: 30px;
+}
+.carolyn-img .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.carolyn-img:hover .img-top {
+  display: inline;
+}
+/*nav bar code*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<body>
+<!-- comment -->
+<ul>
+    <li><a class="active" href="index.html">The Galaxy</a></li>
+    <li><a class="inactive" href="spacejunk.html">The Wastelands</a></li>
+    <li><a href="#contact">The Planeteers</a></li>
+    <li><a href="#about">The Helpers</a></li>
+  </ul>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<div class = "carolyn-img"> 
+    <img src="c1.png" width="250" alt="no wink">
+    <img src="c2.png" class="img-top" width="250" alt="wink">
+</div>
+</body>
+</html>
