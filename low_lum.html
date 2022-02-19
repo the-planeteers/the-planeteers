@@ -29,17 +29,6 @@
     svg.append("rect")
         .attr("width", 1150)
         .attr("height", 550);
-    //low lum
-    // var lum = svg.append('image')
-    //     .attr('xlink:href', 'galaxy-lines.png')
-    //     .attr("x", 482)
-    //     .attr("y", 182)
-    //     .attr('width', 50vw)
-    //     .attr('height', 50vh)
-    //     .attr('id', 'idSUN')
-    //     .on("click", function(d){
-    //         $("#sun").show();
-    //     });
     //linnea small icon
     var myimage_c = svg.append('image')
         .attr('xlink:href', 't4.png')
@@ -52,6 +41,16 @@
         .on("click", function(d){
             $("#linnea").show();
         });
+    var wastelands_icon = svg.append('image')
+    .attr('xlink:href', 'wasteland-icon.png')
+    .attr("x", 50)
+    .attr("y", 350)
+    .attr('width', 150)
+    .attr('height', 150)
+    .attr('id', 'wl')
+    .on("click", function(d){
+        $("#wasteland").show();
+    });
 </script>
 <!-- Modal using jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -89,9 +88,7 @@
   //Input for multiple modals
   window.addEventListener('load', function() {
     initializeModal('linnea', 'x');
-    initializeModal('planet1', 'y');
-    initializeModal('planet2', 'idP2');
-    initializeModal('sun', 'idSUN');
+    initializeModal('wasteland', 'wl');
 });
 
 </script>
@@ -111,6 +108,27 @@
         <div class="linnea-img">
           <img src="t.png" width ="250" alt="no wink">
             <img src="t2.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<!-- modal for wasteland -->
+<div id="wasteland" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Hey there, name's Liz. I'm just doing my routine search of space trash I can repurpose for my satellites. 
+      I take 'em with me to the wasteland. Wanna come with?
+      <br>
+      <br>
+      <a href="spacejunk.html" class ="button"> Take me there! </a>
+      <div class = "child">
+        <div class="linnea-img">
+          <img src="l1.png" width ="250" alt="no wink">
+            <img src="l2.png" class="img-top" width ="250" alt="wink ;)">
         </div>
       </div>
   </div>
