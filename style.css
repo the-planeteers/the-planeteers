@@ -1,6 +1,9 @@
 body {
 background-image: url('galaxy.png');
 }
+p {
+    color:#cc2c81;
+}
 
 /* The Modal (background) */
 .parent {
@@ -148,7 +151,6 @@ border-radius: 100px;
       }
 }
 #pl_name{
-    color:white;
     position:absolute;
     top:50vh;
     left:50vw;
@@ -194,7 +196,6 @@ border-radius: 100px;
 }
 
 #p2_name{
-    color:white;
     position:absolute;
     top:50vh;
     left:52vw;
@@ -241,7 +242,6 @@ border-radius: 100px;
     }
 }
 #p3_name{
-    color:white;
     position:absolute;
     top:50vh;
     left:52vw;
@@ -288,7 +288,6 @@ border-radius: 100px;
     }
 }
 #p4_name{
-    color:white;
     position:absolute;
     top:50vh;
     left:52vw;
