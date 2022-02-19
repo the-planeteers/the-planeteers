@@ -108,7 +108,12 @@ border-radius: 100px;
 }
   
 
-
+#sun_name{
+    color:white;
+    position:absolute;
+    top:53vh;
+    left:51vw;
+}
 #sun{
     width:60px;
     height:60px;
