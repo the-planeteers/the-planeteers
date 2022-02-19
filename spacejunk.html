@@ -138,8 +138,8 @@ li a:hover {
     //carolyn small icon
     var myimage_c = svg.append('image')
         .attr('xlink:href', 'c1.png')
-        .attr("x", 100)
-        .attr("y", 60)
+        .attr("x", 40)
+        .attr("y", 35)
         .attr('width', 200)
         .attr('height', 200)
         .attr('id', 'x')
@@ -148,17 +148,17 @@ li a:hover {
             $("#carolyn").show();
         });
       //TO DO: add and adjust image -> x is what you will have to edit along with the coordinates
-      /*var myimage_c = svg.append('image')
-        .attr('xlink:href', 'TODO.png')
-        .attr("x", 100)
-        .attr("y", 60)
+    var junk1 = svg.append('image')
+        .attr('xlink:href', 'sj1.png')
+        .attr("x", 200)
+        .attr("y", 200)
         .attr('width', 200)
         .attr('height', 200)
-        .attr('id', 'TODO-ID2')
+        .attr('id', 'y')
         //open modal on click
         .on("click", function(d){
-            $("#TODO-ID1").show();
-        });*/
+            $("#spacejunk1").show();
+        });
   </script>
 
   <!-- Modal code here -->
@@ -200,7 +200,7 @@ li a:hover {
   //Input for multiple modals
   window.addEventListener('load', function() {
     initializeModal('carolyn', 'x');
-    //initializeModal('TODO-ID1', 'TODO-ID2');
+    initializeModal('spacejunk1', 'y');
 });
 
 </script>
@@ -221,12 +221,12 @@ li a:hover {
   </div>
 
 <!-- Modal for space junk -->
-<div id="TODO" class="modal">
+<div id="spacejunk1" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      ADD space junk info
+      Space junk is bad!
       <div class = "child">
         <div class="carolyn-img">
           <img src="c1.png" width ="250" alt="no wink">
