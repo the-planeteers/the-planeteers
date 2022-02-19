@@ -3,7 +3,9 @@
 <head>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src = "https://d3js.org/d3-path.v1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <style>
 body {
   background-image: url('galaxy.png');
@@ -86,194 +88,6 @@ body {
 .linnea-img:hover .img-top {
   display: inline;
 }
-.mercury{
-  width:10px;
-  height:10px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: mercury 6s linear infinite;
-}
-
-@keyframes mercury{
-  0%{
-    transform:rotate(0deg)
-              translate(-6.57px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(1494deg)
-              translate(-6.57px)
-              rotate(1494deg);
-  }
-}
-
-.venus{
-  width:25px;
-  height:25px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: venus 6s linear infinite;
-}
-
-@keyframes venus{
-  0%{
-    transform:rotate(0deg)
-              translate(-11.5px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(584.8deg)
-              translate(-11.5px)
-              rotate(584.8deg);
-  }
-}
-
-.earth{
-  width:30px;
-  height:30px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: earth 6s linear infinite;
-}
-
-@keyframes earth{
-  0%{
-    transform:rotate(0deg)
-              translate(-16.43px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(360deg)
-              translate(-16.43px)
-              rotate(360deg);
-  }
-}
-
-.mars{
-  width:15px;
-  height:15px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: mars 6s linear infinite;
-}
-
-@keyframes mars{
-  0%{
-    transform:rotate(0deg)
-              translate(-16.43px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(194deg)
-              translate(-16.43px)
-              rotate(194deg);
-  }
-}
-
-.jupiter{
-  width:15px;
-  height:15px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: jupiter 6s linear infinite;
-}
-
-@keyframes jupiter{
-  0%{
-    transform:rotate(0deg)
-              translate(-16.43px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(31deg)
-              translate(-16.43px)
-              rotate(31deg);
-  }
-}
-
-.saturn{
-  width:15px;
-  height:15px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: saturn 6s linear infinite;
-}
-
-@keyframes saturn{
-  0%{
-    transform:rotate(0deg)
-              translate(-16.43px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(12.4deg)
-              translate(-16.43px)
-              rotate(12.4deg);
-  }
-}
-
-.uranus{
-  width:15px;
-  height:15px;
-  background:cyan;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: uranus 6s linear infinite;
-}
-
-@keyframes uranus{
-  0%{
-    transform:rotate(0deg)
-              translate(-16.43px)
-              rotate(0deg);
-
-  
-  }
-  100%{
-    transform:rotate(deg)
-              translate(-16.43px)
-              rotate(12.4deg);
-  }
-}
 
 /*css to center the d3 svg no matter what screen*/
 svg {
@@ -288,6 +102,13 @@ svg {
 </style>
 
 <body>
+<!-- Planets in line -->
+<img id="sun" src="sun.png" ></img>
+<img id="p1" src="planet.png" ></img>
+<img id="p2" src="p2.png" ></img>
+<img id="p3" src="p2.png"></img>
+<img id="p4" src="p2.png"></img>
+
 <!-- Begin JavaScript using DS -->
 <script>
     var width = 1150;
@@ -314,41 +135,6 @@ svg {
         //open modal on click
         .on("click", function(d){
             $("#linnea").show();
-        });
-    //sun icon
-    var sun =       
-        // d = document,
-        // e = d.documentElement,
-        svg.append('image')
-        .attr('xlink:href', 'sun.png')
-        .attr("x", width/2)
-        .attr("y", height/2)
-        .attr('width', 60)
-        .attr('height', 60)
-        .attr('id', 'idSUN')
-        .on("click", function(d){
-            $("#sun").show();
-        });
-    //planets here 
-    var p1 = svg.append('image')
-        .attr('xlink:href', 'planet.png')
-        .attr("x", 100)
-        .attr("y", 60)
-        .attr('width', 30)
-        .attr('height', 50)
-        .attr('id', 'y')
-        .on("click", function(d){
-            $("#planet1").show();
-        });
-    var p2 = svg.append('image')
-        .attr('xlink:href', 'p2.png')
-        .attr("x", 190)
-        .attr("y", 70)
-        .attr('width', 30)
-        .attr('height', 40)
-        .attr('id', 'idP2')
-        .on("click", function(d){
-            $("#planet2").show();
         });
 </script>
 <!-- Modal using jQuery -->
@@ -410,52 +196,6 @@ svg {
   </div>
 </div>
 
-<!-- planet1 Modal -->
-<div id="planet1" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class ="parent"> 
-      stuff here!
-    </div>
-  </div>
-  </div>
-</div>
-
-<!-- planet2 Modal -->
-<div id="planet2" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class ="parent"> 
-      stuff here p2
-    </div>
-  </div>
-  </div>
-</div>
-
-<!-- Sun Modal -->
-<div id="sun" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class ="parent"> 
-      It's hot!!
-    </div>
-  </div>
-  </div>
-</div>
-
-<div class="main">
-    <img src="p2.png" class="mercury" width="100" height="100" />
-    <!-- <img src="planet.png" class="venus" width="100" height="100" />
-    <img src="sun.png" class="earth" width="100" height="100" />
-    <img src="planet.png" class="mars" width="100" height="100" />
-    <img src="planet.png" class="jupiter" width="100" height="100" />
-    <img src="planet.png" class="saturn" width="100" height="100" />
-    <img src="planet.png" class="uranus" width="100" height="100" />
-    <img src="planet.png" class="neptune" width="100" height="100" /> -->
-</div>
 </body>
 
 </html>
