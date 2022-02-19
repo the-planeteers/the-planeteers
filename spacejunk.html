@@ -167,6 +167,16 @@ li a:hover {
         .on("click", function(d){
             $("#spacejunk2").show();
         });
+    var junk2 = svg.append('image')
+        .attr('xlink:href', 'solar.png')
+        .attr("x", 850)
+        .attr("y", 50)
+        .attr('width', 300)
+        .attr('height', 300)
+        .attr('id', 'IDsolar')
+        .on("click", function(d){
+            $("#solar").show();
+        });
   </script>
 
 <!-- Modal using jQuery -->
