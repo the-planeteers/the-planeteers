@@ -265,7 +265,7 @@ border-radius: 100px;
     left:33vw;
 }
 
-#galaxy-lines-high-highcarbon{
+#galaxy-lines-high-lowcarbon{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
@@ -275,7 +275,7 @@ border-radius: 100px;
     left:40vw;
 }
 
-#galaxy-lines-high-lowcarbon{
+#galaxy-lines-high-highcarbon{
     position:absolute;
     /* width:520px; */
     /* height:500px; */
