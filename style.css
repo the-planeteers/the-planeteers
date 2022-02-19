@@ -147,7 +147,26 @@ border-radius: 100px;
                   rotate(360deg);
       }
 }
+#pl_name{
+    color:white;
+    position:absolute;
+    top:50vh;
+    left:50vw;
+    animation: pl_name 3s linear infinite;
+}
 
+@keyframes pl_name{
+    0%{
+      transform:rotate(0deg)
+                translate(-5vw)
+                rotate(0deg);
+    }
+      100%{
+        transform:rotate(360deg)
+                  translate(-5vw)
+                  rotate(0deg);
+      }
+}
 /* Want to make planets rotate around central sun */
 .p2{
     width:20px;
@@ -174,6 +193,26 @@ border-radius: 100px;
     }
 }
 
+#p2_name{
+    color:white;
+    position:absolute;
+    top:50vh;
+    left:52vw;
+    animation: p2_name 6s linear infinite;
+}
+
+@keyframes p2_name{
+    0%{
+      transform:rotate(0deg)
+                translate(15vw)
+                rotate(0deg);
+    }
+      100%{
+        transform:rotate(360deg)
+                  translate(15vw)
+                  rotate(0deg);
+      }
+}
 /* Want to make planets rotate around central sun */
 .p3{
     width:26px;
@@ -201,7 +240,26 @@ border-radius: 100px;
                 rotate(90deg);
     }
 }
+#p3_name{
+    color:white;
+    position:absolute;
+    top:50vh;
+    left:52vw;
+    animation: p3_name 12s linear infinite;
+}
 
+@keyframes p3_name{
+    0%{
+      transform:rotate(0deg)
+                translate(-25vw)
+                rotate(0deg);
+    }
+      100%{
+        transform:rotate(360deg)
+                  translate(-25vw)
+                  rotate(0deg);
+      }
+}
 /* Want to make planets rotate around central sun */
 .p4{
     width:30px;
@@ -229,7 +287,26 @@ border-radius: 100px;
                 rotate(480deg);
     }
 }
+#p4_name{
+    color:white;
+    position:absolute;
+    top:50vh;
+    left:52vw;
+    animation: p4_name 24s linear infinite;
+}
 
+@keyframes p4_name{
+    0%{
+      transform:rotate(0deg)
+                translate(34vw)
+                rotate(0deg);
+    }
+      100%{
+        transform:rotate(360deg)
+                  translate(34vw)
+                  rotate(0deg);
+      }
+}
 #galaxy-lines-low{
     position:absolute;
     /* width:520px; */
