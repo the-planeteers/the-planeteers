@@ -27,22 +27,22 @@ img{
   @keyframes p1{
     0%{
       transform:rotate(0deg)
-                translate(10vw)
+                translate(-10vw)
                 rotate(0deg);
   
     
     }
     100%{
       transform:rotate(360deg)
-                translate(10vw)
+                translate(-10vw)
                 rotate(360deg);
     }
 }
 
 /* Want to make planets rotate around central sun */
 .p2{
-    width:10px;
-    height:10px;
+    width:33px;
+    height:33px;
     border-radius:50%;
     position:absolute;
     overflow:hidden;
@@ -55,22 +55,22 @@ img{
   @keyframes p2{
     0%{
       transform:rotate(0deg)
-                translate(15vw)
+                translate(20vw)
                 rotate(0deg);
   
     
     }
     100%{
       transform:rotate(360deg)
-                translate(15vw)
-                rotate(360deg);
+                translate(20vw)
+                rotate(180deg);
     }
 }
 
 /* Want to make planets rotate around central sun */
 .p3{
-    width:10px;
-    height:10px;
+    width:20px;
+    height:20px;
     border-radius:50%;
     position:absolute;
     overflow:hidden;
@@ -83,15 +83,15 @@ img{
   @keyframes p3{
     0%{
       transform:rotate(0deg)
-                translate(20vw)
+                translate(-20vh)
                 rotate(0deg);
   
     
     }
     100%{
       transform:rotate(360deg)
-                translate(20vw)
-                rotate(360deg);
+                translate(-20vh)
+                rotate(90deg);
     }
 }
 
@@ -111,15 +111,15 @@ img{
   @keyframes p4{
     0%{
       transform:rotate(0deg)
-                translate(40vw)
+                translate(-34vw)
                 rotate(0deg);
   
     
     }
     100%{
       transform:rotate(360deg)
-                translate(40vw)
-                rotate(360deg);
+                translate(-34vw)
+                rotate(480deg);
     }
 }
 
