@@ -127,58 +127,62 @@ li a:hover {
 
   <!-- Begin JavaScript using DS -->
   <script>
-    var width = 1150;
+       var width = 1150;
     var height = 550;
-  
+
     //Create SVG element
     var svg = d3.select("body")
             .append("svg")
             .attr("width", width)
             .attr("height", height);
-    //carolyn small icon
+    //linnea small icon
     var myimage_c = svg.append('image')
-        .attr('xlink:href', 'carosmol.png')
-        .attr("x", 80)
-        .attr("y", 60)
-        .attr('width', 150)
-        .attr('height', 150)
+        .attr('xlink:href', 't3.png')
+        .attr("x", 950)
+        .attr("y", 90)
+        .attr('width', 100)
+        .attr('height', 100)
         .attr('id', 'x')
         //open modal on click
         .on("click", function(d){
-            $("#carolyn").show();
+            $("#linnea").show();
         });
-    var junk1 = svg.append('image')
-        .attr('xlink:href', 'sj1.png')
+    //sun icon
+    var sun =       
+        // d = document,
+        // e = d.documentElement,
+        svg.append('image')
+        .attr('xlink:href', 'sun.png')
+        .attr("x", width/2)
+        .attr("y", height/2)
+        .attr('width', 60)
+        .attr('height', 60)
+        .attr('id', 'idSUN')
+        .on("click", function(d){
+            $("#sun").show();
+        });
+    //planets here 
+    var p1 = svg.append('image')
+        .attr('xlink:href', 'planet.png')
         .attr("x", 100)
-        .attr("y", 300)
-        .attr('width', 200)
-        .attr('height', 200)
-        .attr('id', 'IDjunk1')
+        .attr("y", 60)
+        .attr('width', 30)
+        .attr('height', 50)
+        .attr('id', 'y')
         .on("click", function(d){
-            $("#spacejunk1").show();
+            $("#planet1").show();
         });
-    var junk2 = svg.append('image')
-        .attr('xlink:href', 'sj2.png')
-        .attr("x", 450)
-        .attr("y", 50)
-        .attr('width', 600)
-        .attr('height', 600)
-        .attr('id', 'IDjunk2')
+    var p2 = svg.append('image')
+        .attr('xlink:href', 'p2.png')
+        .attr("x", 190)
+        .attr("y", 70)
+        .attr('width', 30)
+        .attr('height', 40)
+        .attr('id', 'idP2')
         .on("click", function(d){
-            $("#spacejunk2").show();
-        });
-    var junk2 = svg.append('image')
-        .attr('xlink:href', 'solar.png')
-        .attr("x", 850)
-        .attr("y", 50)
-        .attr('width', 300)
-        .attr('height', 300)
-        .attr('id', 'IDsolar')
-        .on("click", function(d){
-            $("#solar").show();
+            $("#planet2").show();
         });
   </script>
-
 <!-- Modal using jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
@@ -191,8 +195,10 @@ li a:hover {
   function initializeModal(modalID, buttonID) {
   // Get the modal element
   var modal = document.getElementById(modalID);
+
   // Get the button that opens the modal
   var btn = document.getElementById(buttonID);
+
   // Get the <span> element that closes the modal
   var span = modal.querySelector('.close');
   // When the user clicks on <span> (x), close the modal
@@ -212,48 +218,53 @@ li a:hover {
 }
   //Input for multiple modals
   window.addEventListener('load', function() {
-    initializeModal('carolyn', 'x');
-    initializeModal('spacejunk1', 'IDjunk1');
-    InitializeModal('spacejunk2', 'IDjunk2');
+    initializeModal('linnea', 'x');
+    initializeModal('planet1', 'y');
+    initializeModal('planet2', 'idP2');
+    initializeModal('sun', 'idSUN');
 });
-
-</script>
-<!-- The Modal for Carolyn speech box-->
-<div id="carolyn" class="modal">
+</script><!-- The Modal for linnea speech box-->
+<div id="linnea" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Hello, I'm Carolyn. Click on the space junk to learn more!
+      Hello, I'm Linnea, from Planet Amaze! I am doing a routine check-up to see if this planet can sustain life. 
+      <br> 
+      Luminosity: <br>
+      <a href="low_lum.html" class ="button"> Low </a>
       <div class = "child">
-        <div class="carolyn-img">
-          <img src="c1.png" width ="250" alt="no wink">
-            <img src="c2.png" class="img-top" width ="250" alt="wink ;)">
+        <div class="linnea-img">
+          <img src="t.png" width ="250" alt="no wink">
+            <img src="t2.png" class="img-top" width ="250" alt="wink ;)">
         </div>
       </div>
   </div>
   </div>
 </div>
-<!-- Modal for space junk -->
-<div id="spacejunk1" class="modal">
+
+<!-- planet1 Modal -->
+<div id="planet1" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Space junk is bad!
+      stuff here!
+    </div>
   </div>
   </div>
-
 </div>
-<div id="spacejunk2" class="modal">
+
+<!-- planet2 Modal -->
+<div id="planet2" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Space junk is bad! 2
+      stuff here p2
+    </div>
   </div>
   </div>
-
 </div>
 </body>
 </html>
