@@ -1,6 +1,7 @@
 body {
-background-image: 
-url('galaxy.png');
+  background-image: 
+  url('galaxy.png');
+  background-size: 1450px 750px;
 }
 
 p {
