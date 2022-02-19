@@ -108,6 +108,7 @@ svg {
 <img id="p2" src="p2.png" ></img>
 <img id="p3" src="p2.png"></img>
 <img id="p4" src="p2.png"></img>
+<img id="galaxy-lines" src="galaxy-lines.png"></img>
 
 <!-- Begin JavaScript using DS -->
 <script>
@@ -124,16 +125,16 @@ svg {
         .attr("width", 1150)
         .attr("height", 550);
     //low lum
-    var lum = svg.append('image')
-        .attr('xlink:href', 'galaxy-lines.png')
-        .attr("x", 300)
-        .attr("y", 100)
-        .attr('width', 250)
-        .attr('height', 250)
-        .attr('id', 'idSUN')
-        .on("click", function(d){
-            $("#sun").show();
-        });
+    // var lum = svg.append('image')
+    //     .attr('xlink:href', 'galaxy-lines.png')
+    //     .attr("x", 482)
+    //     .attr("y", 182)
+    //     .attr('width', 50vw)
+    //     .attr('height', 50vh)
+    //     .attr('id', 'idSUN')
+    //     .on("click", function(d){
+    //         $("#sun").show();
+    //     });
     //linnea small icon
     var myimage_c = svg.append('image')
         .attr('xlink:href', 't3.png')
