@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<style>
+.container {
+  display: block;
+  width: 100%;
+}
+body {
+  background-image: url('galaxydrawn1.png');
+  background-size: 1450px 750px;
+}
+
+.parent {
+position: relative;
+width: 300px;
+padding: 50px;
+margin: 20px;
+margin-left: auto;
+margin-right: auto;
+bottom:0;
+}
+.child {
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+top:0;
+left:0
+}
+.card {
+  float: left;
+  margin: 20px;
+  padding: 10px 3px;
+  /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/
+  width: calc( 100% / 5 - 10px);
+}
+.about-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #4b02618a;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/*first element*/
+
+.container .card:first-child {
+  margin-left: 0;
+}
+
+
+/*last element of the first row*/
+
+.container .card:nth-child(5n) {
+  margin-right: 0;
+}
+
+
+/*first-element of the 2nd row*/
+
+.container .card:nth-child(5n+1) {
+  margin-left: 0;
+}
+
+
+/*last element*/
+
+.container .card:last-child {
+  margin-right: 0;
+}
+
+/*nav bar code*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+</style>
+<body>
+    <!-- nav bar-->
+    <ul>
+        <li><a href="index.html">The Regal System</a></li>
+        <li><a href="spacejunk.html">The Wastelands</a></li>
+        <li><a href="planeteers.html">The Planeteers</a></li>
+        <li><a href="references.html">The Resources</a></li>
+      </ul>
+    <!-- title -->
+    <div class="about-section">
+        <h1>Meet the Planeteers </h1>
+        <p>Our T9 Hackathon Website!</p>
+      </div>
+    <!-- profile containers -->
+    <div class="container">
+        <div class="card">
+            <div class = "parent">
+                <img src = "liz.png" width="250" alt="liz photo">
+                <div class = child> 
+                  <img src = "l1.png" width = "150" alt ="liz icon">
+                </div>
+              </div>
+        </div>
+        <div class="card">
+            <div class = "parent">
+                <img src = "carolyn.png" width="250" alt="Carolyn photo">
+                <div class = child> 
+                  <img src = "c1.png" width = "130" alt ="carolyn icon">
+                </div>
+              </div>
+        </div>
+        <div class="card">
+            <div class = "parent">
+                <img src = "linnea.png" width="250" alt="Linnea photo">
+                <div class = child> 
+                  <img src = "t2.png" width = "150" alt ="Linnea icon">
+                </div>
+              </div>
+        </div>
+        <div class="card">
+            <div class = "parent">
+                <img src = "chi.png" width="250" alt="Chi photo">
+                <div class = child> 
+                  <img src = "chi-blue.png" width = "150" alt ="Chi icon">
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
