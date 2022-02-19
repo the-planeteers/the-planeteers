@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src = "https://d3js.org/d3-path.v1.min.js"></script>
+</head>
+<style>
+body {
+  background-image: url('galaxy.png');
+}
+/* The Modal (background) */
+.parent {
+  position: relative;
+  background-color: lightgrey;
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom:0;
+}
+.child {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top:0;
+  right:0;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content -> transparent box */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+.modal-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float:right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*for hover effect!*/
+.linnea-img {
+  width: 90px;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin: 30px;
+}
+.linnea-img .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.linnea-img:hover .img-top {
+  display: inline;
+}
+.mercury{
+  width:10px;
+  height:10px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: mercury 6s linear infinite;
+}
+
+@keyframes mercury{
+  0%{
+    transform:rotate(0deg)
+              translate(-6.57px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(1494deg)
+              translate(-6.57px)
+              rotate(1494deg);
+  }
+}
+
+.venus{
+  width:25px;
+  height:25px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: venus 6s linear infinite;
+}
+
+@keyframes venus{
+  0%{
+    transform:rotate(0deg)
+              translate(-11.5px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(584.8deg)
+              translate(-11.5px)
+              rotate(584.8deg);
+  }
+}
+
+.earth{
+  width:30px;
+  height:30px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: earth 6s linear infinite;
+}
+
+@keyframes earth{
+  0%{
+    transform:rotate(0deg)
+              translate(-16.43px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-16.43px)
+              rotate(360deg);
+  }
+}
+
+.mars{
+  width:15px;
+  height:15px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: mars 6s linear infinite;
+}
+
+@keyframes mars{
+  0%{
+    transform:rotate(0deg)
+              translate(-16.43px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(194deg)
+              translate(-16.43px)
+              rotate(194deg);
+  }
+}
+
+.jupiter{
+  width:15px;
+  height:15px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: jupiter 6s linear infinite;
+}
+
+@keyframes jupiter{
+  0%{
+    transform:rotate(0deg)
+              translate(-16.43px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(31deg)
+              translate(-16.43px)
+              rotate(31deg);
+  }
+}
+
+.saturn{
+  width:15px;
+  height:15px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: saturn 6s linear infinite;
+}
+
+@keyframes saturn{
+  0%{
+    transform:rotate(0deg)
+              translate(-16.43px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(12.4deg)
+              translate(-16.43px)
+              rotate(12.4deg);
+  }
+}
+
+.uranus{
+  width:15px;
+  height:15px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: uranus 6s linear infinite;
+}
+
+@keyframes uranus{
+  0%{
+    transform:rotate(0deg)
+              translate(-16.43px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(deg)
+              translate(-16.43px)
+              rotate(12.4deg);
+  }
+}
+
+/*css to center the d3 svg no matter what screen*/
+svg {
+  display: block;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+.img-planet{
+
+}
+</style>
+
+<body>
+<!-- Begin JavaScript using DS -->
+<script>
+    var width = 1150;
+    var height = 550;
+
+    //Create SVG element
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+    //Create and append rectangle element
+    svg.append("rect")
+        .attr("width", 1150)
+        .attr("height", 550);
+        
+    //linnea small icon
+    var myimage_c = svg.append('image')
+        .attr('xlink:href', 't3.png')
+        .attr("x", 950)
+        .attr("y", 90)
+        .attr('width', 100)
+        .attr('height', 100)
+        .attr('id', 'x')
+        //open modal on click
+        .on("click", function(d){
+            $("#linnea").show();
+        });
+    //sun icon
+    var sun =       
+        // d = document,
+        // e = d.documentElement,
+        svg.append('image')
+        .attr('xlink:href', 'sun.png')
+        .attr("x", width/2)
+        .attr("y", height/2)
+        .attr('width', 60)
+        .attr('height', 60)
+        .attr('id', 'idSUN')
+        .on("click", function(d){
+            $("#sun").show();
+        });
+    //planets here 
+    var p1 = svg.append('image')
+        .attr('xlink:href', 'planet.png')
+        .attr("x", 100)
+        .attr("y", 60)
+        .attr('width', 30)
+        .attr('height', 50)
+        .attr('id', 'y')
+        .on("click", function(d){
+            $("#planet1").show();
+        });
+    var p2 = svg.append('image')
+        .attr('xlink:href', 'p2.png')
+        .attr("x", 190)
+        .attr("y", 70)
+        .attr('width', 30)
+        .attr('height', 40)
+        .attr('id', 'idP2')
+        .on("click", function(d){
+            $("#planet2").show();
+        });
+</script>
+<!-- Modal using jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    $("#modal .close").click()
+</script>
+<!-- Script to open modals based on input -->
+<script>
+  function initializeModal(modalID, buttonID) {
+  // Get the modal element
+  var modal = document.getElementById(modalID);
+
+  // Get the button that opens the modal
+  var btn = document.getElementById(buttonID);
+
+  // Get the <span> element that closes the modal
+  var span = modal.querySelector('.close');
+  // When the user clicks on <span> (x), close the modal
+  span.addEventListener('click', function() {
+    modal.style.display = "none";
+  });
+  // When the user clicks on the button, open the modal
+  btn.addEventListener('click', function() {
+    modal.style.display = "block";
+  });
+  // Close modal outside of box
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+  //Input for multiple modals
+  window.addEventListener('load', function() {
+    initializeModal('linnea', 'x');
+    initializeModal('planet1', 'y');
+    initializeModal('planet2', 'idP2');
+    initializeModal('sun', 'idSUN');
+});
+
+</script>
+<!-- The Modal for linnea speech box-->
+<div id="linnea" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Hello, I'm Linnea, from Planet Amaze! I am doing a routine check-up to see if this planet can sustain life. 
+      <div class = "child">
+        <div class="linnea-img">
+          <img src="t.png" width ="250" alt="no wink">
+            <img src="t2.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<!-- planet1 Modal -->
+<div id="planet1" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      stuff here!
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- planet2 Modal -->
+<div id="planet2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      stuff here p2
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Sun Modal -->
+<div id="sun" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      It's hot!!
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="main">
+    <img src="p2.png" class="mercury" width="100" height="100" />
+    <!-- <img src="planet.png" class="venus" width="100" height="100" />
+    <img src="sun.png" class="earth" width="100" height="100" />
+    <img src="planet.png" class="mars" width="100" height="100" />
+    <img src="planet.png" class="jupiter" width="100" height="100" />
+    <img src="planet.png" class="saturn" width="100" height="100" />
+    <img src="planet.png" class="uranus" width="100" height="100" />
+    <img src="planet.png" class="neptune" width="100" height="100" /> -->
+</div>
+</body>
+
+</html>
