@@ -1,6 +1,8 @@
 body {
-background-image: url('galaxy.png');
+background-image: 
+url('galaxy.png');
 }
+
 p {
     color:#cc2c81;
 }
@@ -122,8 +124,9 @@ display: inline;
 /*css to center the d3 svg no matter what screen*/
 svg {
 display: block;
+top: 25px;
 margin: auto;
-border: 1px solid gray;
+/* border: 1px solid gray; */
 }
 
 .button {

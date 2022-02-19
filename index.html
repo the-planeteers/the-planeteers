@@ -44,7 +44,11 @@
     //Create and append rectangle element
     svg.append("rect")
         .attr("width", 1150)
-        .attr("height", 550);
+        .attr("height", 550)
+        .attr("y", 15)
+        .attr("x", 0)
+        // .attr("rx", 30)
+        // .attr("ry", 30); 
     //linnea small icon
     var myimage_c = svg.append('image')
         .attr('xlink:href', 't3.png')
