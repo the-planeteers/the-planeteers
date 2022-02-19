@@ -1,0 +1,40 @@
+img{
+    width:20px;
+    height:20px;
+}
+
+#sun{
+    width:60px;
+    height:60px;
+    position:absolute;
+    top:48vh;
+    left:50vw;
+}
+
+#p1{
+    position:absolute;
+    top:50vh;
+    left:40vw;
+}
+
+#p2{
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:49vh;
+    left:30vw;
+}
+
+#p3{
+    position:absolute;
+    top:50vh;
+    left:20vw;
+}
+
+#p4{
+    width:35px;
+    height:35px;
+    position:absolute;
+    top:49vh;
+    left:10vw;
+}
