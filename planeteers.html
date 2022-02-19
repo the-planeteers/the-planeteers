@@ -31,7 +31,7 @@ left:0
 }
 .card {
   float: left;
-  margin: 20px;
+  margin: 35px;
   padding: 10px 3px;
   /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/
   width: calc( 100% / 5 - 10px);
@@ -42,6 +42,28 @@ left:0
   background-color: #4b02618a;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  height: 300px; /*Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*first element*/
@@ -109,13 +131,13 @@ li a:hover {
     <!-- title -->
     <div class="about-section">
         <h1>Meet the Planeteers </h1>
-        <p>Our T9 Hackathon Website!</p>
+        <p>Welcome to our T9 Hackathon Website!</p>
       </div>
     <!-- profile containers -->
     <div class="container">
         <div class="card">
             <div class = "parent">
-                <img src = "liz.png" width="250" alt="liz photo">
+                <img src = "liz.png" width="310" alt="liz photo">
                 <div class = child> 
                   <img src = "l1.png" width = "150" alt ="liz icon">
                 </div>
@@ -123,7 +145,7 @@ li a:hover {
         </div>
         <div class="card">
             <div class = "parent">
-                <img src = "carolyn.png" width="250" alt="Carolyn photo">
+                <img src = "carolyn.png" width="310" alt="Carolyn photo">
                 <div class = child> 
                   <img src = "c1.png" width = "130" alt ="carolyn icon">
                 </div>
@@ -131,7 +153,7 @@ li a:hover {
         </div>
         <div class="card">
             <div class = "parent">
-                <img src = "linnea.png" width="250" alt="Linnea photo">
+                <img src = "linnea.png" width="310" alt="Linnea photo">
                 <div class = child> 
                   <img src = "t2.png" width = "150" alt ="Linnea icon">
                 </div>
@@ -139,11 +161,34 @@ li a:hover {
         </div>
         <div class="card">
             <div class = "parent">
-                <img src = "chi.png" width="250" alt="Chi photo">
+                <img src = "chi.png" width="310" alt="Chi photo">
                 <div class = child> 
                   <img src = "chi-blue.png" width = "150" alt ="Chi icon">
                 </div>
               </div>
         </div>
     </div>
+
+    <div class="row">
+      <p style="width:500px;"> .</p>
+      <div class="column" style="background-color:#4b02618a;">
+        <h2>Liz</h2>
+        <p>Some text..</p>
+        <p><a href="website">My Website!</a></p>
+      </div>
+      <div class="column" style="background-color:#4b02618a;">
+        <h2>Carolyn</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column" style="background-color:#4b02618a;">
+        <h2>Linnea</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column" style="background-color:#4b02618a;">
+        <h2>Chi</h2>
+        <p>Some text..</p>
+        <p><a href="website">My Website!</a></p>
+      </div>
+    </div>
+  
 </body>
