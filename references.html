@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+<style>
+
+body {
+  background-image: url('galaxydrawn1.png');
+  background-size: 1450px 750px;
+}
+
+/*nav bar code*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<body>
+<ul>
+    <li><a class="active" href="index.html">The Galaxy</a></li>
+    <li><a class="active" href="spacejunk.html">The Wastelands</a></li>
+    <li><a href="#contacts">The Planeteers</a></li>
+    <li><a class="inactive" href="references.html">The Resources</a></li>
+  </ul>
+<style>
+  /*table contents*/
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+
+  #references {
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  #references td, #customers th {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px;
+  }
+  
+  #references tr:nth-child(even){background-color: #f2f2f280;}
+  #references tr:nth-child(odd){background-color: #f2f2f280;}
+  #references th:nth-child(even){background-color:#4b02618a ;}
+  #references th:nth-child(odd){background-color:#4b02618a ;}
+  
+  #references tr:hover {background-color: #f2f2f2c0;}
+  
+  #references th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: middle;
+    background-color: #4b02618a;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  <img src="references.png" alt="IDreferences" class="center">
+  <table id="references" class="center">
+    <tr>
+      <th>Code References</th>
+      <th>About</th>
+    </tr>
+    <tr>
+      <td><a href="https://kinsta.com/blog/javascript-libraries/">Javascript Libraries</a></td>
+      <td>Maria Anders</td>
+    </tr>
+    <tr>
+      <td><a href="url">url</a></td>
+      <td>about url</td>
+    </tr>
+    <tr>
+      <td><a href="url">url</a></td>
+      <td>about url</td>
+    </tr>
+    <tr>
+      <th>Research References</th>
+      <th>About</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.planetarybiology.com/calculating_habitable_zone.html">Calculating the habitable zone</a></td>
+      <td>We used this formula to calculate the habitable zone of a planet.</td>
+    </tr>
+    <tr>
+      <td><a href="https://exoplanets.nasa.gov/search-for-life/habitable-zone/">The Search for Life: Habitable Zone</a></td>
+      <td>Used examples to represent the layout of our habitable zone</td>
+    <tr>
+      <td><a href="url">url</a></td>
+      <td>about url</td>
+    </tr>
+  </table>
