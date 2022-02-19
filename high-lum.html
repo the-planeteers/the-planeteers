@@ -5,19 +5,10 @@
     <script src = "https://d3js.org/d3-path.v1.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <style>
 body {
   background-image: url('galaxy.png');
-}
-.button {
-  background-color: #b279b5; /* Green */
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  border-radius: 100px;
 }
 /* The Modal (background) */
 .parent {
@@ -104,15 +95,20 @@ svg {
   margin: auto;
   border: 1px solid gray;
 }
+
+.img-planet{
+
+}
 </style>
 
 <body>
 <!-- Planets in line -->
-<img id="sun" src="sun.png"></img>
-<img src="planet.png" class="p1"></img>
-<img src="p2.png" class="p2"></img>
-<img src="p2.png" class="p3"></img>
-<img src="p2.png" class="p4"></img>
+<img id="galaxy-lines-2" src="galaxy-lines.png"></img>
+<img id="sun" src="sun.png" ></img>
+<img class="p1" src="planet.png" ></img>
+<img class="p2" src="p2.png" ></img>
+<img class="p3" src="p2.png"></img>
+<img class="p4" src="p2.png"></img>
 
 <!-- Begin JavaScript using DS -->
 <script>
@@ -128,9 +124,20 @@ svg {
     svg.append("rect")
         .attr("width", 1150)
         .attr("height", 550);
+    //low lum
+    // var lum = svg.append('image')
+    //     .attr('xlink:href', 'galaxy-lines.png')
+    //     .attr("x", 482)
+    //     .attr("y", 182)
+    //     .attr('width', 50vw)
+    //     .attr('height', 50vh)
+    //     .attr('id', 'idSUN')
+    //     .on("click", function(d){
+    //         $("#sun").show();
+    //     });
     //linnea small icon
     var myimage_c = svg.append('image')
-        .attr('xlink:href', 't3.png')
+        .attr('xlink:href', 't4.png')
         .attr("x", 950)
         .attr("y", 90)
         .attr('width', 100)
@@ -190,10 +197,6 @@ svg {
     <span class="close">&times;</span>
     <div class ="parent"> 
       Hello, I'm Linnea, from Planet Amaze! I am doing a routine check-up to see if this planet can sustain life. 
-      <br> 
-      Luminosity: <br>
-      <a href="low_lum.html" class ="button"> Low </a>
-      <a href="high_lum.html" class ="button"> High </a>
       <div class = "child">
         <div class="linnea-img">
           <img src="t.png" width ="250" alt="no wink">

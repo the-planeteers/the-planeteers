@@ -127,3 +127,11 @@
     top:28vh;
     left:40vw;
 }
+/* For high lum */
+#galaxy-lines-2{
+  position:absolute;
+    width:40vw;
+    height:75vh;
+    top:15vh;
+    left:33vw; 
+}
