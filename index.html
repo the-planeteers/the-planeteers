@@ -86,7 +86,61 @@ body {
 .linnea-img:hover .img-top {
   display: inline;
 }
-.circle{
+.mercury{
+  width:10px;
+  height:10px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: mercury 6s linear infinite;
+}
+
+@keyframes mercury{
+  0%{
+    transform:rotate(0deg)
+              translate(-6.57px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-6.57px)
+              rotate(1494deg);
+  }
+}
+
+.venus{
+  width:20px;
+  height:20px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: venus 6s linear infinite;
+}
+
+@keyframes venus{
+  0%{
+    transform:rotate(0deg)
+              translate(-11.5px)
+              rotate(0deg);
+
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-11.5px)
+              rotate(584.8deg);
+  }
+}
+
+.earth{
   width:30px;
   height:30px;
   background:cyan;
@@ -95,19 +149,21 @@ body {
   top:0; bottom:0; left:0;right:0;
   overflow:hidden;
   margin:auto;
-  animation: circle 6s linear infinite;
+  animation: earth 6s linear infinite;
 }
-@keyframes circle{
+
+@keyframes earth{
   0%{
     transform:rotate(0deg)
-              translate(-165px)
+              translate(-16.43px)
               rotate(0deg);
+
   
   }
   100%{
     transform:rotate(360deg)
-              translate(-165px)
-              rotate(-360deg);
+              translate(-16.43px)
+              rotate(360deg);
   }
 }
 
@@ -276,8 +332,14 @@ body {
 </div>
 
 <div class="main">
-    <img src="planet.png" class="circle" width="100" height="100" />
-
+    <img src="p2.png" class="mercury" width="100" height="100" />
+    <img src="planet.png" class="venus" width="100" height="100" />
+    <img src="planet.png" class="earth" width="100" height="100" />
+    <!-- <img src="planet.png" class="mars" width="100" height="100" />
+    <img src="planet.png" class="jupiter" width="100" height="100" />
+    <img src="planet.png" class="saturn" width="100" height="100" />
+    <img src="planet.png" class="uranus" width="100" height="100" />
+    <img src="planet.png" class="neptune" width="100" height="100" /> -->
 </div>
 </body>
 
