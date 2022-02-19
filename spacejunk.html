@@ -6,7 +6,8 @@
 <style>
 
 body {
-  background-image: url('galaxy.png');
+  background-image: url('galaxydrawn.png');
+  background-size: 1475px 850px;
 }
 /* The Modal (background) */
 .parent {
@@ -136,11 +137,11 @@ li a:hover {
             .attr("height", height);
     //carolyn small icon
     var myimage_c = svg.append('image')
-        .attr('xlink:href', 'c1.png')
-        .attr("x", 40)
-        .attr("y", 35)
-        .attr('width', 200)
-        .attr('height', 200)
+        .attr('xlink:href', 'carosmol.png')
+        .attr("x", 80)
+        .attr("y", 60)
+        .attr('width', 150)
+        .attr('height', 150)
         .attr('id', 'x')
         //open modal on click
         .on("click", function(d){
@@ -148,13 +149,23 @@ li a:hover {
         });
     var junk1 = svg.append('image')
         .attr('xlink:href', 'sj1.png')
-        .attr("x", 200)
-        .attr("y", 200)
+        .attr("x", 100)
+        .attr("y", 300)
         .attr('width', 200)
         .attr('height', 200)
-        .attr('id', 'IDjunk')
+        .attr('id', 'IDjunk1')
         .on("click", function(d){
             $("#spacejunk1").show();
+        });
+    var junk2 = svg.append('image')
+        .attr('xlink:href', 'sj2.png')
+        .attr("x", 450)
+        .attr("y", 50)
+        .attr('width', 600)
+        .attr('height', 600)
+        .attr('id', 'IDjunk2')
+        .on("click", function(d){
+            $("#spacejunk2").show();
         });
   </script>
 
@@ -192,17 +203,18 @@ li a:hover {
   //Input for multiple modals
   window.addEventListener('load', function() {
     initializeModal('carolyn', 'x');
-    initializeModal('spacejunk1', 'IDjunk');
+    initializeModal('spacejunk1', 'IDjunk1');
+    InitializeModal('spacejunk2', 'IDjunk2');
 });
 
 </script>
-<!-- The Modal for linnea speech box-->
+<!-- The Modal for Carolyn speech box-->
 <div id="carolyn" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Hello, I'm Linnea, from Planet Amaze! I am doing a routine check-up to see if this planet can sustain life. 
+      Hello, I'm Carolyn. Click on the space junk to learn more!
       <div class = "child">
         <div class="carolyn-img">
           <img src="c1.png" width ="250" alt="no wink">
@@ -219,6 +231,16 @@ li a:hover {
     <span class="close">&times;</span>
     <div class ="parent"> 
       Space junk is bad!
+  </div>
+  </div>
+
+</div>
+<div id="spacejunk2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Space junk is bad! 2
   </div>
   </div>
 
