@@ -49,23 +49,23 @@
         .attr('xlink:href', 't4.png')
         .attr("x", 950)
         .attr("y", 90)
-        .attr('width', 100)
-        .attr('height', 100)
+        .attr('width', 200)
+        .attr('height', 200)
         .attr('id', 'x')
         //open modal on click
         .on("click", function(d){
             $("#linnea").show();
         });
-    var wastelands_icon = svg.append('image')
-    .attr('xlink:href', 'wasteland-icon.png')
-    .attr("x", 50)
-    .attr("y", 350)
-    .attr('width', 150)
-    .attr('height', 150)
-    .attr('id', 'wl')
-    .on("click", function(d){
-        $("#wasteland").show();
-    });
+        var wastelands_icon = svg.append('image')
+        .attr('xlink:href', 'wasteland-icon.png')
+        .attr("x", 50)
+        .attr("y", 350)
+        .attr('width', 200)
+        .attr('height', 200)
+        .attr('id', 'wl')
+        .on("click", function(d){
+            $("#wasteland").show();
+        });
 </script>
 <!-- Modal using jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
