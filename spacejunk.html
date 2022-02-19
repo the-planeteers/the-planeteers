@@ -124,7 +124,6 @@ li a:hover {
     <li><a href="#about">The Helpers</a></li>
   </ul>
 
-
   <!-- Begin JavaScript using DS -->
   <script>
     var width = 1150;
@@ -147,22 +146,19 @@ li a:hover {
         .on("click", function(d){
             $("#carolyn").show();
         });
-      //TO DO: add and adjust image -> x is what you will have to edit along with the coordinates
     var junk1 = svg.append('image')
         .attr('xlink:href', 'sj1.png')
         .attr("x", 200)
         .attr("y", 200)
         .attr('width', 200)
         .attr('height', 200)
-        .attr('id', 'y')
-        //open modal on click
+        .attr('id', 'IDjunk')
         .on("click", function(d){
             $("#spacejunk1").show();
         });
   </script>
 
-  <!-- Modal code here -->
-  <!-- Modal using jQuery -->
+<!-- Modal using jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 <!-- jQuery Modal -->
@@ -174,22 +170,18 @@ li a:hover {
   function initializeModal(modalID, buttonID) {
   // Get the modal element
   var modal = document.getElementById(modalID);
-
   // Get the button that opens the modal
   var btn = document.getElementById(buttonID);
-
   // Get the <span> element that closes the modal
   var span = modal.querySelector('.close');
   // When the user clicks on <span> (x), close the modal
   span.addEventListener('click', function() {
     modal.style.display = "none";
   });
-
   // When the user clicks on the button, open the modal
   btn.addEventListener('click', function() {
     modal.style.display = "block";
   });
-
   // Close modal outside of box
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
@@ -200,7 +192,7 @@ li a:hover {
   //Input for multiple modals
   window.addEventListener('load', function() {
     initializeModal('carolyn', 'x');
-    initializeModal('spacejunk1', 'y');
+    initializeModal('spacejunk1', 'IDjunk');
 });
 
 </script>
@@ -210,7 +202,7 @@ li a:hover {
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class ="parent"> 
-      Hello there!
+      Hello, I'm Linnea, from Planet Amaze! I am doing a routine check-up to see if this planet can sustain life. 
       <div class = "child">
         <div class="carolyn-img">
           <img src="c1.png" width ="250" alt="no wink">
@@ -219,7 +211,7 @@ li a:hover {
       </div>
   </div>
   </div>
-
+</div>
 <!-- Modal for space junk -->
 <div id="spacejunk1" class="modal">
   <!-- Modal content -->
@@ -227,12 +219,6 @@ li a:hover {
     <span class="close">&times;</span>
     <div class ="parent"> 
       Space junk is bad!
-      <div class = "child">
-        <div class="carolyn-img">
-          <img src="c1.png" width ="250" alt="no wink">
-            <img src="c2.png" class="img-top" width ="250" alt="wink ;)">
-        </div>
-      </div>
   </div>
   </div>
 

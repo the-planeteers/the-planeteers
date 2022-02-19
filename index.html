@@ -256,12 +256,10 @@ body {
   span.addEventListener('click', function() {
     modal.style.display = "none";
   });
-
   // When the user clicks on the button, open the modal
   btn.addEventListener('click', function() {
     modal.style.display = "block";
   });
-
   // Close modal outside of box
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
