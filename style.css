@@ -16,28 +16,26 @@
     top:50vh;
     left:50vw;
     margin:auto;
-    animation: p1 6s linear infinite;
+    animation: p1 3s linear infinite;
   }
   
   @keyframes p1{
     0%{
       transform:rotate(0deg)
-                translate(-10vw)
+                translate(-5vw)
                 rotate(0deg);
-  
-    
     }
-    100%{
-      transform:rotate(360deg)
-                translate(-10vw)
-                rotate(360deg);
-    }
+      100%{
+        transform:rotate(360deg)
+                  translate(-5vw)
+                  rotate(360deg);
+      }
 }
 
 /* Want to make planets rotate around central sun */
 .p2{
-    width:33px;
-    height:33px;
+    width:20px;
+    height:20px;
     border-radius:50%;
     position:absolute;
     overflow:hidden;
@@ -50,42 +48,40 @@
   @keyframes p2{
     0%{
       transform:rotate(0deg)
-                translate(20vw)
+                translate(15vw)
                 rotate(0deg);
-  
-    
     }
     100%{
       transform:rotate(360deg)
-                translate(20vw)
+                translate(15vw)
                 rotate(180deg);
     }
 }
 
 /* Want to make planets rotate around central sun */
 .p3{
-    width:20px;
-    height:20px;
+    width:26px;
+    height:26px;
     border-radius:50%;
     position:absolute;
     overflow:hidden;
     top:50vh;
     left:50vw;
     margin:auto;
-    animation: p3 6s linear infinite;
+    animation: p3 12s linear infinite;
   }
   
   @keyframes p3{
     0%{
       transform:rotate(0deg)
-                translate(-20vh)
+                translate(-25vw)
                 rotate(0deg);
   
     
     }
     100%{
       transform:rotate(360deg)
-                translate(-20vh)
+                translate(-25vw)
                 rotate(90deg);
     }
 }
@@ -100,20 +96,20 @@
     top:50vh;
     left:50vw;
     margin:auto;
-    animation: p4 6s linear infinite;
+    animation: p4 24s linear infinite;
   }
   
   @keyframes p4{
     0%{
       transform:rotate(0deg)
-                translate(-34vw)
+                translate(34vw)
                 rotate(0deg);
   
     
     }
     100%{
       transform:rotate(360deg)
-                translate(-34vw)
+                translate(34vw)
                 rotate(480deg);
     }
 }
@@ -126,12 +122,4 @@
     height:50vh;
     top:28vh;
     left:40vw;
-}
-/* For high lum */
-#galaxy-lines-2{
-  position:absolute;
-    width:40vw;
-    height:75vh;
-    top:15vh;
-    left:33vw; 
 }
