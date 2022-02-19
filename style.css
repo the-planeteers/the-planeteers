@@ -58,7 +58,7 @@ right:0;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -102,23 +102,28 @@ cursor: pointer;
 
 /*for hover effect!*/
 .linnea-img {
-width: 90px;
+padding-top: 130px; /* Location of the box */
+width: 110px;
 height: auto;
 position: relative;
 display: inline-block;
 margin: 30px;
+z-index: 5;
 }
 
 .linnea-img .img-top {
+padding-top: 130px; /* Location of the box */
 display: none;
 position: absolute;
 top: 0;
 left: 0;
-z-index: 99;
+z-index: 10;
 }
 
 .linnea-img:hover .img-top {
 display: inline;
+padding-top: 130px; /* Location of the box */
+z-index: 10;
 }
 
 /*css to center the d3 svg no matter what screen*/
@@ -136,8 +141,9 @@ padding: 10px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
-font-size: 10px;
+font-size: 14px;
 border-radius: 100px;
+z-index: 90;
 }
   
 
