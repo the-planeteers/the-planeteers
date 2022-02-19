@@ -137,7 +137,7 @@ li a:hover {
             .attr("height", height);
     var cloud = svg.append("image")
         .attr('xlink:href', 'wl-bg.png')
-        .attr("x", 80)
+        .attr("x", 50)
         .attr("y", 10)
         .attr('width', 900)
         .attr('height', 550)
@@ -173,6 +173,16 @@ li a:hover {
         .attr('id', 'idP2')
         .on("click", function(d){
             $("#spacejunk2").show();
+        });
+    var solar = svg.append('image')
+        .attr('xlink:href', 'solar.png')
+        .attr("x", 700)
+        .attr("y", 1)
+        .attr('width', 400)
+        .attr('height', 400)
+        .attr('id', 'idS')
+        .on("click", function(d){
+            $("#solarX").show();
         });
   </script>
 <!-- Modal using jQuery -->
@@ -213,7 +223,7 @@ li a:hover {
     initializeModal('carolyn', 'x');
     initializeModal('spacejunk1', 'y');
     initializeModal('spacejunk2', 'idP2');
-    initializeModal('sun', 'idSUN');
+    initializeModal('solarX', 'idS');
 });
 </script><!-- The Modal for carolyn speech box-->
 <div id="carolyn" class="modal">
@@ -255,5 +265,38 @@ li a:hover {
   </div>
   </div>
 </div>
+
+<!-- Solar panel Modal -->
+<div id="solarX" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Hey, you found me! 
+      <br> ...
+      <br> ... Uhhh Carolyn didn't send you to scold 
+      <br>me, right? I'm trying my best to clean up 
+      <br>my mess, but hey! It's for a good cause!
+      <br> You see this bad boy? It's a solar panel 
+      <br>that orbits in a position where it's always
+      <br>facing the sun! 
+      <br>
+      <br> You know what that means??
+      <br>
+      <br> Well do you??
+      <br> INFINITE ENERGY BABYYYYYYYYYYYYYYYYYYY!!!!
+      <br> <a hr
+      <div class ="child">
+        <div class="carolyn-img">
+          <img src="l3.png" width ="250" alt="no wink">
+          <img src="l4.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
 </body>
 </html>
