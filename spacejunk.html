@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+<style>
+
+body {
+  background-image: url('galaxy.png');
+}
+/* The Modal (background) */
+.parent {
+  position: relative;
+  background-color: lightgrey;
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom:0;
+}
+.child {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top:0;
+  right:0;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content -> transparent box */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+.modal-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float:right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+    /*for hover effect!*/
+.carolyn-img {
+  width: 90px;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin: 30px;
+}
+.carolyn-img .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.carolyn-img:hover .img-top {
+  display: inline;
+}
+/*nav bar code*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<body>
+  <!-- D3 JS -->
+<!-- comment -->
+<ul>
+    <li><a class="active" href="index.html">The Galaxy</a></li>
+    <li><a class="inactive" href="spacejunk.html">The Wastelands</a></li>
+    <li><a href="#contact">The Planeteers</a></li>
+    <li><a href="#about">The Helpers</a></li>
+  </ul>
+
+  <!-- Begin JavaScript using DS -->
+  <script>
+    var width = 1150;
+    var height = 550;
+  
+    //Create SVG element
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+    //carolyn small icon
+    var myimage_c = svg.append('image')
+        .attr('xlink:href', 'c1.png')
+        .attr("x", 40)
+        .attr("y", 35)
+        .attr('width', 200)
+        .attr('height', 200)
+        .attr('id', 'x')
+        //open modal on click
+        .on("click", function(d){
+            $("#carolyn").show();
+        });
+    var junk1 = svg.append('image')
+        .attr('xlink:href', 'sj1.png')
+        .attr("x", 200)
+        .attr("y", 200)
+        .attr('width', 200)
+        .attr('height', 200)
+        .attr('id', 'IDjunk')
+        .on("click", function(d){
+            $("#spacejunk1").show();
+        });
+  </script>
+
+<!-- Modal using jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    $("#modal .close").click()
+</script>
+<!-- Script to open modals based on input -->
+<script>
+  function initializeModal(modalID, buttonID) {
+  // Get the modal element
+  var modal = document.getElementById(modalID);
+  // Get the button that opens the modal
+  var btn = document.getElementById(buttonID);
+  // Get the <span> element that closes the modal
+  var span = modal.querySelector('.close');
+  // When the user clicks on <span> (x), close the modal
+  span.addEventListener('click', function() {
+    modal.style.display = "none";
+  });
+  // When the user clicks on the button, open the modal
+  btn.addEventListener('click', function() {
+    modal.style.display = "block";
+  });
+  // Close modal outside of box
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+  //Input for multiple modals
+  window.addEventListener('load', function() {
+    initializeModal('carolyn', 'x');
+    initializeModal('spacejunk1', 'IDjunk');
+});
+
+</script>
+<!-- The Modal for linnea speech box-->
+<div id="carolyn" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Hello, I'm Linnea, from Planet Amaze! I am doing a routine check-up to see if this planet can sustain life. 
+      <div class = "child">
+        <div class="carolyn-img">
+          <img src="c1.png" width ="250" alt="no wink">
+            <img src="c2.png" class="img-top" width ="250" alt="wink ;)">
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+<!-- Modal for space junk -->
+<div id="spacejunk1" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class ="parent"> 
+      Space junk is bad!
+  </div>
+  </div>
+
+</div>
+</body>
+</html>
