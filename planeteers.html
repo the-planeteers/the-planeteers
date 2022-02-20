@@ -2,6 +2,7 @@
 <head>
     <title> The Planeteers</title>
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
 </head>
 
 <style>
@@ -13,7 +14,31 @@ body {
   background-image: url('galaxydrawn1.png');
   background-size: 1450px 1200px;
 }
+/*hover changes*/
+.linnea-img {
+padding-top: 250px; /* Location of the box */
+width: 110px;
+height: auto;
+position: relative;
+display: inline-block;
+margin: 30px;
+z-index: 5;
+}
 
+.linnea-img .img-top {
+padding-top: 250px; /* Location of the box */
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 10;
+}
+
+.linnea-img:hover .img-top {
+display: inline;
+padding-top: 250px; /* Location of the box */
+z-index: 10;
+}
 /*link color*/
 a:link {
   color: white;
@@ -149,16 +174,22 @@ li a:hover {
         <div class="card">
             <div class = "parent">
                 <img src = "liz.png" width= 275vw alt="liz photo">
-                <div class = child> 
-                  <img src = "l1.png" width = 150vw alt ="liz icon">
+                <div class = "child"> 
+                  <div class = "linnea-img">
+                    <img src = "l1.png" width = 150vw alt ="liz icon">
+                    <img src = "l2.png" class="img-top" width = 150vw alt ="liz icon2">
+                  </div>
                 </div>
               </div>
         </div>
         <div class="card">
             <div class = "parent">
                 <img src = "carolyn.png" width=275vw alt="Carolyn photo">
-                <div class = child> 
-                  <img src = "c1.png" width = 130vw alt ="carolyn icon">
+                <div class = "child"> 
+                  <div class = "linnea-img">
+                    <img src = "c1.png" width = 130vw alt ="carolyn icon">
+                    <img src = "c2.png" class="img-top" width = 130vw alt ="carolyn icon">
+                  </div>
                 </div>
               </div>
         </div>
@@ -166,7 +197,10 @@ li a:hover {
             <div class = "parent">
                 <img src = "linnea.png" width=275vw alt="Linnea photo">
                 <div class = child> 
-                  <img src = "t2.png" width = 150vw alt ="Linnea icon">
+                  <div class = "linnea-img">
+                    <img src = "t.png" width = 150vw alt ="Linnea icon">
+                    <img src = "t2.png" class="img-top" width = 150vw alt ="Linnea icon">
+                  </div>
                 </div>
               </div>
         </div>
@@ -174,7 +208,10 @@ li a:hover {
             <div class = "parent">
                 <img src = "chi.png" width=275vw alt="Chi photo">
                 <div class = child> 
-                  <img src = "chi-blue.png" width = 150vw alt ="Chi icon">
+                  <div class = "linnea-img">
+                    <img src = "chi-blue.png" width = 150vw alt ="Chi icon">
+                    <img src = "chi-purple.png" class="img-top" width = 150vw alt ="Chi icon">
+                  </div>
                 </div>
               </div>
         </div>
@@ -200,11 +237,11 @@ li a:hover {
       <div class="column" style="background-color:#4b02618a;">
         <h2>Linnea</h2>
         <p><a href="https://www.linkedin.com/in/linnea-wolniewicz/">My LinkedIn!</a></p>
-        <p>I'm a senior Astrophysics major graduating this Spring, May 2022. I'm planning
-          to pursue a PhD in computer science beginning next fall and research the applications 
+        <p>I'm a senior Astrophysics major planning
+          to pursue a PhD in computer science beginning next fall. I want to explore the applications 
           of data science techniques to astrophysical data. 
           <br> <br>
-          In my free time I can be found singing in choir, practicing the harp, or climbing in the gym.
+          In my free time I can be found singing in choir, practicing the harp, or climbing in the gym!
         </p>
       </div>
       <div class="column" style="background-color:#4b02618a;">
